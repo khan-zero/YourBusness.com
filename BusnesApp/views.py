@@ -3,8 +3,7 @@ from .models import (
     HeroSection, Client, AboutUs, AboutUsOpp,
     WhyUS, WhyUsQA, Skills, SkillsUsage, Service,
     CallToAction, Portfolio, Member, Subscribe,
-    FAQ, Contact, BeginPageContent, ProjectCard,
-    Illustrations, DevelopmentApproach)
+    FAQ, Contact)
 # Create your views here.
 def index(request):
     hero = HeroSection.objects.all()

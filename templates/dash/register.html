@@ -38,44 +38,48 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Akkaunt Yaratish</h1>
                             </div>
-                                <form method="post" action="{% url 'index' %}" class="user">
-                                    {% csrf_token %}
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="username" class="form-control form-control-user" id="exampleFirstName" name="username"
-                                                placeholder="Foydalanuvchi nomingiz">
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <input type="text" class="form-control form-control-user" id="exampleLastName" name="full_name"
-                                                placeholder="Ism & Familyangiz">
-                                        </div>
+                            <form method="post" action="{% url 'register' %}" class="user">
+                                {% csrf_token %}
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <label for="exampleUsername" class="sr-only">Username</label>
+                                        <input type="text" class="form-control form-control-user" id="exampleUsername" name="username"
+                                            placeholder="Foydalanuvchi nomingiz" required>
                                     </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control form-control-user" id="exampleInputEmail" name="email"
-                                            placeholder="Email Adresingiz">
+                                    <div class="col-sm-6">
+                                        <label for="exampleFullName" class="sr-only">Full Name</label>
+                                        <input type="text" class="form-control form-control-user" id="exampleFullName" name="full_name"
+                                            placeholder="Ism & Familyangiz" required>
                                     </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" name="password"
-                                                placeholder="Parol">
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" name="confirm_password"
-                                                placeholder="Parolni qayta kiriting">
-                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail" class="sr-only">Email</label>
+                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" name="email"
+                                        placeholder="Email Adresingiz" required>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <label for="exampleInputPassword" class="sr-only">Password</label>
+                                        <input type="password" class="form-control form-control-user" id="exampleInputPassword" name="password"
+                                            placeholder="Parol" required>
                                     </div>
-                                    <button type="submit" class="btn btn-primary btn-user btn-block">
-                                        Registratsiyadan o'tish
-                                    </button>
-                                    <hr>
-                                    <a href="{% url 'index' %}" class="btn btn-google btn-user btn-block">
-                                        <i class="fab fa-google fa-fw"></i> Google bilan registratsiya qilish
-                                    </a>
-                                    <a href="{% url 'index' %}" class="btn btn-facebook btn-user btn-block">
-                                        <i class="fab fa-facebook-f fa-fw"></i> Facebook bilan registratsiya qilish
-                                    </a>
-                                </form>
-
+                                    <div class="col-sm-6">
+                                        <label for="exampleRepeatPassword" class="sr-only">Repeat Password</label>
+                                        <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" name="confirm_password"
+                                            placeholder="Parolni qayta kiriting" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-user btn-block">
+                                    Registratsiyadan o'tish
+                                </button>
+                                <hr>
+                                <a href="#" class="btn btn-google btn-user btn-block">
+                                    <i class="fab fa-google fa-fw"></i> Google bilan registratsiya qilish
+                                </a>
+                                <a href="#" class="btn btn-facebook btn-user btn-block">
+                                    <i class="fab fa-facebook-f fa-fw"></i> Facebook bilan registratsiya qilish
+                                </a>
+                            </form>
                             <hr>
                             <div class="text-center">
                                 <a class="small" href="forgot-password.html">Parolni unutdingizmi?</a>

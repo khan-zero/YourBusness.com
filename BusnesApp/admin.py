@@ -17,10 +17,4 @@ admin.site.register(Member)
 admin.site.register(Subscribe)
 admin.site.register(FAQ)
 admin.site.register(Contact)
-
-
-
-admin.site.register(BeginPageContent)
-admin.site.register(ProjectCard)
-admin.site.register(Illustrations)
-admin.site.register(DevelopmentApproach)
+admin.site.register(DashActivities)

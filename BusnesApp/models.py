@@ -99,6 +99,9 @@ class Portfolio(models.Model):
     img = models.ImageField(upload_to="media/portfolio")
     name = models.CharField(max_length=255)
 
+    def __str__(self):
+        return self.name
+
 
 class Member(models.Model):
     full_name = models.CharField(max_length=255)
@@ -110,6 +113,9 @@ class Member(models.Model):
     facebook_link = models.URLField(null=True, blank=True)
     instagram_link = models.URLField(null=True, blank=True)
     linkedin_link = models.URLField(null=True, blank=True)
+
+    def __str__(self):
+        return self.full_name
 
 
 class Subscribe(models.Model):
@@ -130,6 +136,9 @@ class FAQ(models.Model):
     class Meta:
         verbose_name_plural = 'FAQ'
         verbose_name = 'FAQ'
+
+    def __str__(self):
+        return self.question
 
 class Contact(models.Model):
     address = models.CharField(max_length=255)
@@ -155,24 +164,13 @@ class FooterLiks(models.Model):
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-class BeginPageContent(models.Model):
-    m_earnings = models.IntegerField()
-    a_earnings = models.IntegerField()
-    tasks = models.IntegerField()
-    pending_requests = models.IntegerField()
 
-class ProjectCard(models.Model):
-    activities = models.CharField(max_length=255)
-    percentage = models.IntegerField()
-
-class Illustrations(models.Model):
-    img = models.ImageField(null=True, blank=True)
-    body = models.TextField()
-    author = models.CharField(max_length=255)
-
-class DevelopmentApproach(models.Model):
-    body = models.TextField()
-    conclusion = models.CharField(max_length=255)
+class DashActivities(models.Model):
+    message = models.IntegerField()
+    notifications = models.IntegerField()
+    class Meta:
+        verbose_name_plural = 'DashActivities'
+        verbose_name = 'DashActivity'
 
 
 

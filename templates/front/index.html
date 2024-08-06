@@ -68,8 +68,8 @@
           <li class="dropdown"><a href="#team"><span>Tizimga kirish • Chiqish</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="{% url 'register' %} ">Registratsiya</a></li>
-              <li><a href="#">Tizimga kirish</a></li>
-              <li><a href="#">Chiqish</a></li>
+              <li><a href="{% url 'login' %}">Tizimga kirish</a></li>
+              <li><a href="{% url 'logout' %}">Chiqish</a></li>
             </ul>
           </li>
           <li><a href="#contact">Kontakt</a></li>
@@ -485,7 +485,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
+        <h2>Kontaktlashish</h2>
         <p>Marhamat biz bilan tanishib chiqing</p>
       </div><!-- End Section Title -->
 
@@ -499,7 +499,7 @@
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
-                  <h3>Address</h3>
+                  <h3>Adress</h3>
                   <p>{{ contact.address }}</p>
                 </div>
               </div><!-- End Info Item -->
@@ -507,7 +507,7 @@
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
-                  <h3>Call Us</h3>
+                  <h3>Biz bilan bog'laning</h3>
                   <p>{{ contact.call_center }}</p>
                 </div>
               </div><!-- End Info Item -->
@@ -515,7 +515,7 @@
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
-                  <h3>Email Us</h3>
+                  <h3>Email bilan bog'laning</h3>
                   <p>{{ contact.email }}</p>
                 </div>
               </div><!-- End Info Item -->
@@ -553,7 +553,7 @@
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                  <button type="submit">Send Message</button>
+                  <button type="submit">Habar yuborish</button>
                 </div>
 
               </div>
@@ -577,7 +577,7 @@
             <h4>Bizning Yangiliklar gazetamizga qoshinling</h4>
             <p>Bizning axborot byulletenimizga obuna bo'ling va mahsulotlarimiz va xizmatlarimiz haqidagi so'nggi yangiliklarni oling!</p>
             <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Obuna bo'ling"></div>
               <div class="loading">Kutibturing</div>
               <div class="error-message"></div>
               <div class="sent-message">Obuna soʻrovingiz yuborildi. Rahmat!</div>
